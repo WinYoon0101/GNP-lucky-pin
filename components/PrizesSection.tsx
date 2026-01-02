@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { 
   Ticket, 
   Utensils, 
-  Smile, 
-  Droplet, 
+  Panda, 
+  CupSoda, 
   PenTool, 
   Mail, 
   Puzzle,
@@ -151,8 +151,8 @@ const PrizesSection: React.FC = () => {
             
             <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 perspective-500">
                  <SmallGift icon={<Mail />} label="Bao Lì Xì" color="bg-red-500" delay="0s" />
-                 <SmallGift icon={<Smile />} label="Gấu Saola" color="bg-yellow-500" delay="0.2s" />
-                 <SmallGift icon={<Droplet />} label="Bình Nước" color="bg-blue-500" delay="0.4s" />
+                 <SmallGift icon={<Panda />} label="Gấu Saola" color="bg-yellow-500" delay="0.2s" />
+                 <SmallGift icon={<CupSoda />} label="Bình Nước" color="bg-blue-500" delay="0.4s" />
                  <SmallGift icon={<PenTool />} label="Bút Bi" color="bg-purple-500" delay="0.6s" />
                  <SmallGift icon={<Puzzle />} label="Lego" color="bg-green-500" delay="0.8s" />
             </div>

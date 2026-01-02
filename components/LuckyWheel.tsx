@@ -3,16 +3,13 @@ import {
   Speaker, 
   Ticket, 
   Utensils, 
-  Smile, 
-  Droplet, 
   PenTool, 
   Mail, 
   Puzzle, 
-  Sparkles,
   Trophy,
   X,
-  Zap,
-  CupSoda
+  CupSoda,
+  Panda
 } from 'lucide-react';
 import { Prize } from '../types';
 
@@ -76,7 +73,7 @@ const PRIZES: Prize[] = [
     subLabel: 'Quà Xinh', 
     color: '#991B1B', 
     textColor: '#FEF3C7',
-    icon: <Smile className="w-8 h-8 text-white" /> 
+    icon: <Panda className="w-8 h-8 text-white" /> 
   },
   { 
     id: '4', 
@@ -407,8 +404,9 @@ const LuckyWheel: React.FC = () => {
 
                 {/* Content Layer */}
                 <div className="absolute inset-0">
-                    {PRIZES.map((prize, i) => {
+{PRIZES.map((prize, i) => {
   const angle = i * SEGMENT_ANGLE + SEGMENT_ANGLE / 2;
+  const needsRotate = ['1'].includes(prize.id); // chỉ xoay icon này
 
   return (
     <div
@@ -417,7 +415,7 @@ const LuckyWheel: React.FC = () => {
       style={{ transform: `rotate(${angle}deg)` }}
     >
       <div className="flex flex-col items-center gap-1 md:gap-2 pt-2">
-        <div className="transform rotate-180 drop-shadow-sm">
+        <div className={`drop-shadow-sm ${needsRotate ? 'rotate-180' : ''}`}>
           {prize.icon}
         </div>
         <div
@@ -440,6 +438,7 @@ const LuckyWheel: React.FC = () => {
     </div>
   );
 })}
+
 
                 </div>
             </div>
