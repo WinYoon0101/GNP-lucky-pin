@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNP - Vòng quay may mắn </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon cho trang -->
+<link rel="icon" type="image/png" href="/gnp-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Montserrat', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                orange: '#FF7A00',
+                gold: '#FFB347',
+                light: '#FFD18B',
+                navy: '#1A237E'
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 3s infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'scale-in': 'scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'bounce-slight': 'bounceSlight 2s infinite',
+              'shimmer': 'shimmer 2s linear infinite',
+              'tick': 'tick 0.1s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scaleIn: {
+                '0%': { opacity: '0', transform: 'scale(0.9)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              bounceSlight: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-5px)' },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' },
+              },
+              tick: {
+                '0%, 100%': { transform: 'rotate(0deg)' },
+                '50%': { transform: 'rotate(-5deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        overflow-x: hidden;
+        background-color: #FF7A00;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .perspective-500 {
+        perspective: 500px;
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FFD18B;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #FF7A00;
+        border-radius: 5px;
+      }
+      
+      /* Utility for text stroke/outline */
+      .text-outline {
+        text-shadow: 
+          -1px -1px 0 #000,  
+           1px -1px 0 #000,
+          -1px  1px 0 #000,
+           1px  1px 0 #000;
+      }
+      .text-shadow-lg {
+        text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      }
+      .text-3d {
+         text-shadow: 
+         0 1px 0 #ccc,
+         0 2px 0 #c9c9c9,
+         0 3px 0 #bbb,
+         0 4px 0 #b9b9b9,
+         0 5px 0 #aaa,
+         0 6px 1px rgba(0,0,0,.1),
+         0 0 5px rgba(0,0,0,.1),
+         0 1px 3px rgba(0,0,0,.3),
+         0 3px 5px rgba(0,0,0,.2),
+         0 5px 10px rgba(0,0,0,.25),
+         0 10px 10px rgba(0,0,0,.2),
+         0 20px 20px rgba(0,0,0,.15);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
