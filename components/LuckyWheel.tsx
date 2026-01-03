@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { 
-  Speaker, 
+  Headphones, 
   Ticket, 
   Utensils, 
   PenTool, 
@@ -52,11 +52,11 @@ const SPIN_DURATION = 5000; // ms
 const PRIZES: Prize[] = [
   { 
     id: '1', 
-    label: 'LOA JBL', 
+    label: 'TAI NGHE JBL', 
     subLabel: '1.500.000đ', 
     color: '#991B1B', // Deep Red
     textColor: '#FEF3C7', // Light Gold text
-    icon: <Speaker className="w-8 h-8 text-yellow-400 drop-shadow-md" />, 
+    icon: <Headphones className="w-8 h-8 text-yellow-400 drop-shadow-md" />, 
     isGrandPrize: true 
   },
   { 
@@ -340,7 +340,7 @@ const LuckyWheel: React.FC = () => {
       />
 
       {/* Main Wheel Container */}
-      <div className="relative w-[360px] h-[360px] md:w-[550px] md:h-[550px] select-none group">
+      <div className="relative w-[320px] h-[320px] md:w-[550px] md:h-[550px] select-none group">
          
          {/* Background Glow */}
          <div className="absolute inset-[-15%] rounded-full bg-gradient-to-tr from-orange-500/0 via-orange-500/20 to-yellow-500/0 blur-3xl animate-pulse-slow pointer-events-none" />
@@ -406,7 +406,7 @@ const LuckyWheel: React.FC = () => {
                 <div className="absolute inset-0">
 {PRIZES.map((prize, i) => {
   const angle = i * SEGMENT_ANGLE + SEGMENT_ANGLE / 2;
-  const needsRotate = ['1'].includes(prize.id); // chỉ xoay icon này
+  const needsRotate = [''].includes(prize.id); // chỉ xoay icon này
 
   return (
     <div
@@ -509,7 +509,7 @@ const LuckyWheel: React.FC = () => {
                    
                    <div className="absolute inset-0 flex items-center justify-center">
                       <span className={`
-                        font-black text-white text-xl md:text-2xl tracking-widest drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]
+                        font-black text-white text-lg md:text-2xl tracking-widest drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]
                         ${!isSpinning && 'animate-pulse'}
                       `}>
                          START
